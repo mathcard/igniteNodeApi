@@ -1,0 +1,23 @@
+-- Instalando typescript
+yarn add typescript -D
+
+-- Iniciando typescript
+yarn tsc --init
+
+Alterando outDir no tsconfig.json
+Cria pasta onde código typescript será compilado javascript
+
+yarn add ts-node-dev -D
+
+
+
+Descrição dos arquivos - 
+Modules todos os arquivos relacionados a um objeto, no exemplo um carro.
+
+Model, o modelo do item em questão, exemplo Category, a categoria de um carro, quais campos possui.
+
+Repositorios - são uma camada que realiza a manipulação do dados (insert, select, delete)
+
+DTO pega os parametros do routes e passa para os repositorios
+
+Services - Deve possui uma responsabilidade unica, exemplo criar uma categoria.
