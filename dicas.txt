@@ -9,7 +9,17 @@ Cria pasta onde código typescript será compilado javascript
 
 yarn add ts-node-dev -D
 
+-- Upload de arquivos
+yarn add multer
+yarn add @types/multer
 
+-- Trabalhando com csv
+yarn add csv-parse
+yarn add @types/csv-parse
+
+-- Documentação
+yarn add swagger-ui-express
+yarn add @types/swagger-ui-express
 
 Descrição dos arquivos - 
 Modules todos os arquivos relacionados a um objeto, no exemplo um carro.
@@ -21,3 +31,5 @@ Repositorios - são uma camada que realiza a manipulação do dados (insert, sel
 DTO pega os parametros do routes e passa para os repositorios
 
 Services - Deve possui uma responsabilidade unica, exemplo criar uma categoria.
+
+Use Case - Onde ficam as regras de negócios 
