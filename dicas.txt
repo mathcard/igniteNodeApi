@@ -33,3 +33,40 @@ DTO pega os parametros do routes e passa para os repositorios
 Services - Deve possui uma responsabilidade unica, exemplo criar uma categoria.
 
 Use Case - Onde ficam as regras de negócios 
+
+
+-- Docker (Ponto local do dockerfile)
+
+-- Criando imagem
+docker build -t rentx .
+
+-- Start container
+docker run -p 3333:3333 rentx
+
+-- logs
+docker logs <container_name> -f
+
+-- Listar todos comandos (inclusive inativos)
+docker ps -a 
+
+-- Iniciar algum container
+docker start <id> || <name>
+
+-- Forçando recriar um container
+docker-compose up --force-recreate
+
+-- Descobrindo ip do container
+docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container_name>
+docker exec <container_name> cat /etc/hosts
+
+-- typeORM
+yarn add typeorm reflect-metadata
+yarn add pg
+
+-- Inserindo script typeORM no package.json
+  "typeorm": "ts-node-dev ./node_modules/typeorm/cli"
+
+-- Criando tabelas
+yarn typeorm migration:create -n CreateCategories
+
+yarn typeorm migration:run
