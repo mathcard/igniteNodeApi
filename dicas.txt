@@ -70,3 +70,7 @@ yarn add pg
 yarn typeorm migration:create -n CreateCategories
 
 yarn typeorm migration:run
+
+-- Tokenn
+yarn add jsonwebtoken
+yarn add @types/jsonwebtoken
