@@ -1,4 +1,4 @@
-import { compare } from "bcrypt";
+import { compare } from "bcryptjs";
 import { sign } from "jsonwebtoken";
 import { inject, injectable } from "tsyringe";
 
@@ -28,13 +28,13 @@ class AuthenticateUseCase {
     const user = await this.usersRepository.findByEmail(email);
 
     if (!user) {
-      throw new Error("Email or password incorrect");
+      throw new Error("EMAIL or password incorrect");
     }
 
     const passwordMath = await compare(password, user.password);
 
     if (!passwordMath) {
-      throw new Error("Email or password incorrect");
+      throw new Error("Email or PASSWORD incorrect");
     }
 
     // token: mathignite
