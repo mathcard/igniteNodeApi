@@ -74,3 +74,18 @@ yarn typeorm migration:run
 -- Tokenn
 yarn add jsonwebtoken
 yarn add @types/jsonwebtoken
+
+-- Testes
+yarn add jest @types/jest -D
+yarn jest --init
+yarn add ts-jest -D
+
+  bail: true,
+
+  preset: "ts-jest",
+
+  testMatch: [
+    "**/*.spec.ts"    
+  ],
+
+-----------------------
